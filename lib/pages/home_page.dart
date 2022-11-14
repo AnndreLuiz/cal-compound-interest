@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueAccent,
+      backgroundColor: Colors.red,
       body: Padding(
         padding: const EdgeInsets.only(top: 100),
         child: Form(
@@ -27,12 +27,20 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
+                padding: const EdgeInsets.all(24.0),
+                child: _sizebox(),
+              ),
+              Padding(
                 padding: EdgeInsets.all(24),
                 child: TextFormField(
                   controller: investMensal,
                   decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Investimento mensal',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(5),
+                        bottomRight: Radius.circular(5),
+                      ),
+                    ),
                   ),
                 ),
               ),
@@ -69,6 +77,20 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Container _sizebox() {
+    return Container(
+      decoration: BoxDecoration(
+        border: Border.all(width: 1),
+        borderRadius: BorderRadius.circular(5),
+      ),
+      child: Row(
+        children: [
+          Text('R\$'),
+        ],
       ),
     );
   }
