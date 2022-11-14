@@ -1,4 +1,5 @@
 import 'package:comp_int_app/pages/home_page.dart';
+import 'package:comp_int_app/pages/test_page.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatefulWidget {
@@ -14,7 +15,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: 'Investimento',
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: TestPage(),
     );
   }
 }
