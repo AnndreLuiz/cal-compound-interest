@@ -11,7 +11,7 @@ class TestPage extends StatefulWidget {
 
 class _TestPageState extends State<TestPage> {
   final formKey = GlobalKey<FormState>();
-  final investMensal = TextEditingController();
+  late late final investMensal = TextEditingController();
   final anosDeInvestimento = TextEditingController();
   final rentabilidadeAnual = TextEditingController();
   final resultado = TextEditingController();
@@ -123,6 +123,23 @@ class _TestPageState extends State<TestPage> {
                 ),
               ),
             ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              ElevatedButton(
+                onPressed: () {},
+                child: Text('Calcular'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  setState(() {
+                    String investMensal = '';
+                  });
+                },
+                child: Text('Limpar'),
+              ),
+            ],
           )
         ],
       ),
